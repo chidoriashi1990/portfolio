@@ -1,4 +1,4 @@
-# tempates
+# tempatesVueCliProject
 
 > A Vue.js project
 
