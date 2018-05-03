@@ -6,6 +6,7 @@ About Atomic Design
 
 ## UIデザインの関心事をAtomic Designで階層化する
 UIにおけるユーザーの関心事は以下の４つに分類できる
+
 |層|関心|
 |---|---|
 |Tempates|画面全体のレイアウト|
