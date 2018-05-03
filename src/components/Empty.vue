@@ -29,6 +29,9 @@ export default {
   props: {
 
   },
+  computed: {
+
+  },
   /**
    * インスタンスが初期化されるときに同期的に呼ばれる
    */
