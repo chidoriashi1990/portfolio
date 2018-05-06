@@ -27,6 +27,13 @@ export default {
     }
   },
   props: {
+    prop1: {
+      type: String,
+      default: 'default',
+      required: true // requiredは必ず要求するプロパティ
+    }
+  },
+  computed: {
 
   },
   /**
