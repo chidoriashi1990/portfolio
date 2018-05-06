@@ -1,16 +1,16 @@
 <template>
   <div id="UserInfo">
-    <h2>UserInfo</h2>
-    <p>id: {{ id }}</p>
-    <p>name: {{name}}</p>
+    <one-col-two-row :id="id" :name="name"></one-col-two-row>
   </div>
 </template>
 
 <script>
+import OneColTwoRow from '@/components/140.templates/sample/OneColTwoRow'
+
 export default {
   name: 'UserInfo',
   components: {
-
+    OneColTwoRow
   },
   data () {
     return {
@@ -18,13 +18,7 @@ export default {
     }
   },
   methods: {
-    /**
-     * 概要
-     * @param {string} val: 説明
-     */
-    tmp (val) {
 
-    }
   },
   computed: {
     id   () { return this.$store.getters['userInfo/id'] },

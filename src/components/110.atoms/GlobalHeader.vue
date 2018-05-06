@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <slot class="headerName"></slot>
+    <h2><slot></slot></h2>
   </div>
 </template>
 
@@ -19,16 +19,17 @@ export default {
   left: 0px;
   width: 100%;
   background-color: #fff;
-  height: 3vh;
-  padding: 10px 0px;
   z-index: 100;
-  display: block;
-}
 
-.headerName {
-  position: fixed;
-  top: 1vh;
-  left: 5vw;
-  font-size: 4vh;
+  // Google Chrome、Safari
+  display: -webkit-flex;
+  // Firefox
+  display: -moz-flex;
+  // Internet Explorer
+  display: -ms-flex;
+  // Opera
+  display: -o-flex;
+  // CSS3
+  display: flex;
 }
 </style>

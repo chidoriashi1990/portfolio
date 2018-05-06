@@ -2,14 +2,14 @@ import { storiesOf } from '@storybook/vue'
 
 /* addons */
 // LinkTo を使いコンポーネント間を遷移
-import { linkTo } from '@storybook/addon-links'
+// import { linkTo } from '@storybook/addon-links'
 
 /* components */
-import Welcome from './Welcome.vue'
+import GettingStarted from './introduction/GettingStarted'
 
-storiesOf('Welcome', module)
-  .add('to Storybook', () => ({
-    components: { Welcome },
-    template: '<welcome :showApp="action" />',
-    methods: { action: linkTo('Button') }
+storiesOf('Introduction', module)
+  .add('Getting started', () => ({
+    components: { GettingStarted },
+    template: '<getting-started></getting-started>',
+    methods: { }
   }))

@@ -1,5 +1,5 @@
 <template>
-  <img class="user-img-styles" src="./../../assets/logo.png" alt="logo">
+  <img class="user-img-styles" src="./../../../assets/logo.png" alt="logo">
 </template>
 
 <script>
@@ -8,7 +8,7 @@ export default {
 }
 </script>
 
-<style scope>
+<style lang="scss" scope>
   .user-img-styles {
     border: 1px solid #eee;
     border-radius: 100%;

@@ -10,7 +10,7 @@ export default {
 }
 </script>
 
-<style scope>
+<style lang="scss" scope>
   .button-styles {
     border: 1px solid #eee;
     border-radius: 3px;

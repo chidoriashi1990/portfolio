@@ -10,22 +10,20 @@ import { storiesOf } from '@storybook/vue'
 // Centered を使いコンポーネントをページ中央に配置
 // import Centered from '@storybook/addon-centered'
 // コンポーネントの使い方・見た目・propsのName,Type,Defaultを確認
-import VueInfoAddon from 'storybook-addon-vue-info'
+// import VueInfoAddon from 'storybook-addon-vue-info'
 
 /* components */
-import UserAuth from './UserAuth'
+import SingleContent from './sample/SingleContent'
+import OneColTwoRow from './sample/OneColTwoRow'
 
-storiesOf('Organisms', module)
-  .addDecorator(VueInfoAddon)
-  .add('user-auth', () => ({
-    components: { UserAuth },
-    template: '<user-auth></user-auth>',
+storiesOf('Templates', module)
+  .add('single-content', () => ({
+    components: { SingleContent },
+    template: '<single-content></single-content>',
     methods: { }
   }))
-
-storiesOf('Tempates', module)
-  .add('user-auth', () => ({
-    components: { UserAuth },
-    template: '<user-auth></user-auth>',
+  .add('one-col-two-row', () => ({
+    components: { OneColTwoRow },
+    template: '<one-col-two-row></one-col-two-row>',
     methods: { }
   }))

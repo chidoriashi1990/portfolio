@@ -9,9 +9,9 @@
 </template>
 
 <script>
-import Textbox from './../110.atoms/Textbox'
-import MyButton from './../110.atoms/Button'
-import Balloon from './../110.atoms/Balloon'
+import Textbox from './../../110.atoms/Textbox'
+import MyButton from './../../110.atoms/Button'
+import Balloon from './../../110.atoms/Balloon'
 
 export default {
   name: 'auth-form',

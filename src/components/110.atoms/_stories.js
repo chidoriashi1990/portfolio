@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/vue'
 // LinkTo を使いコンポーネント間を遷移
 // import { linkTo } from '@storybook/addon-links'
 // Knobs を使いボタンの背景色とラベルを変更
-// import { withKnobs, text, color } from '@storybook/addon-knobs'
+// import { withKnobs, text, boolean, number } from '@storybook/addon-knobs/vue'
 // import { withNotes } from '@storybook/addon-notes'
 // Centered を使いコンポーネントをページ中央に配置
 // import Centered from '@storybook/addon-centered'
@@ -13,24 +13,16 @@ import { storiesOf } from '@storybook/vue'
 import VueInfoAddon from 'storybook-addon-vue-info'
 
 /* components */
-import UserImage from './UserImage'
-import Header from './Header'
+import SampleContent from './sample/SampleContent'
+import UserImage from './sample/UserImage'
+import GlobalHeader from './GlobalHeader'
 import MyButton from './Button'
 import Balloon from './Balloon'
 import Textbox from './Textbox'
 
 storiesOf('Atoms', module)
+  // .addDecorator(withKnobs)
   .addDecorator(VueInfoAddon)
-  .add('user-image', () => ({
-    components: { UserImage },
-    template: '<user-image></user-image>',
-    methods: { }
-  }))
-  .add('header', () => ({
-    components: { Header },
-    template: '<header>header</header>',
-    methods: { }
-  }))
   .add('button', () => ({
     components: { MyButton },
     template: '<my-button>Button</my-button>',
@@ -44,5 +36,26 @@ storiesOf('Atoms', module)
   .add('textbox', () => ({
     components: { Textbox },
     template: '<textbox></textbox>',
+    methods: { }
+  }))
+
+storiesOf('Atoms/Header', module)
+  .add('global-header', () => ({
+    components: { GlobalHeader },
+    template: '<global-header>header</global-header>',
+    methods: { }
+  }))
+
+storiesOf('Atoms/Sample', module)
+  // .addDecorator(withKnobs)
+  .addDecorator(VueInfoAddon)
+  .add('sample-content', () => ({
+    components: { SampleContent },
+    template: '<sample-content class="sample-default"></sample-content>&nbsp;<sample-content class="sample-max-width"></sample-content>',
+    methods: { }
+  }))
+  .add('user-image', () => ({
+    components: { UserImage },
+    template: '<user-image></user-image>',
     methods: { }
   }))
