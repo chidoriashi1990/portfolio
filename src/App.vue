@@ -24,12 +24,11 @@ export default {
   overflow-x: hidden;
 }
 
-$header-height: 40px;
+$header-height: 5vh;
 .header-height {
   height: $header-height;
-  padding: 0 20px;
 }
 .main-margin-top {
-  margin-top: $header-height + 10px;
+  margin-top: $header-height;
 }
 </style>

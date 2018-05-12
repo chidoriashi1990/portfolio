@@ -26,7 +26,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-// $cardHeight: 0vh;
-</style>

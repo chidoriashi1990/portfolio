@@ -6,12 +6,6 @@ import router from './router'
 import store from './store'
 import validator from 'vue-validator'
 
-/* Bootstrap */
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
-import BootstrapVue from 'bootstrap-vue'
-
-Vue.use(BootstrapVue)
 Vue.use(validator)
 
 Vue.config.productionTip = false

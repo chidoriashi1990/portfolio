@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <h2><slot></slot></h2>
+    <slot></slot>
   </div>
 </template>
 
@@ -20,6 +20,8 @@ export default {
   width: 100%;
   background-color: #fff;
   z-index: 100;
+
+  font-size: 3vh;
 
   // Google Chrome、Safari
   display: -webkit-flex;

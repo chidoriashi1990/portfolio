@@ -1,20 +1,12 @@
 <template>
 <div id="container-fluid">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="content1">
-        <h2>UserInfo</h2>
-        <p>id: {{ idVal }}</p>
-        <p>name: {{ nameVal }}</p>
-      </div>
-    </div>
+  <div class="content1">
+    <h2>UserInfo</h2>
+    <p>id: {{ idVal }}</p>
+    <p>name: {{ nameVal }}</p>
   </div>
-  <div class="row">
-    <div class="col-md-12">
-      <div class="content2">
-        <user-auth></user-auth>
-      </div>
-    </div>
+  <div class="content2">
+    <user-auth></user-auth>
   </div>
 </div>
 </template>
