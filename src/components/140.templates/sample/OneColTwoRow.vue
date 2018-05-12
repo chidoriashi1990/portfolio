@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import UserAuth from '@/components/130.organisms/sample/UserAuth'
+import UserAuth from './../../130.organisms/sample/UserAuth'
 
 export default {
   name: 'OneColTwoRow',
