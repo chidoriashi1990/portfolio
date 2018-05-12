@@ -6,7 +6,11 @@ import router from './router'
 import store from './store'
 import validator from 'vue-validator'
 
+import Vuetify from 'vuetify'
+import 'vuetify/dist/vuetify.min.css'
+
 Vue.use(validator)
+Vue.use(Vuetify)
 
 Vue.config.productionTip = false
 
