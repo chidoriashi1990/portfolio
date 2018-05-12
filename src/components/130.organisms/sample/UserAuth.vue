@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>ユーザー認証</p>
+    <div>ユーザー認証</div>
     <user-image class="userImage"></user-image>
     <auth-form></auth-form>
   </div>
