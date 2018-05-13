@@ -1,4 +1,4 @@
-# tempatesVueCliProject
+# Template-Vue-Project
 
 > A Vue.js project
 
