@@ -1,4 +1,4 @@
-# Template-Vue-Project
+# Template Vue Project
 
 > A Vue.js project
 
