@@ -1,8 +1,8 @@
 <template>
-<v-app dark>
+<v-app>
   <VuetifyTemplate/>
   <div>
-    <router-link to="MaterialSample2">
+    <router-link to="/">
       <v-btn color="success">HOME</v-btn>
     </router-link>
   </div>
