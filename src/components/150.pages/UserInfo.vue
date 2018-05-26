@@ -8,7 +8,7 @@
 import OneColTwoRow from '@/components/140.templates/sample/OneColTwoRow'
 
 export default {
-  name: 'UserInfo',
+  name: location.href.split(/\/(?!.*\/)/)[1].split(/\.(?!.*\.)/)[0],
   components: {
     OneColTwoRow
   },

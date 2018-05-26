@@ -13,7 +13,7 @@
 import VuetifyTemplate from '@/components/140.templates/VuetifyTemplate'
 
 export default {
-  name: 'MaterialSample',
+  name: location.href.split(/\/(?!.*\/)/)[1].split(/\.(?!.*\.)/)[0],
   components: {
     VuetifyTemplate
   },

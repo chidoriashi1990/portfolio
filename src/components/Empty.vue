@@ -7,7 +7,7 @@
 // import sample from './../sample/sample.json'
 
 export default {
-  name: 'Empty',
+  name: location.href.split(/\/(?!.*\/)/)[1].split(/\.(?!.*\.)/)[0],
   components: {
 
   },
