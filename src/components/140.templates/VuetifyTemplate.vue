@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'VuetifyTemplate',
+  name: location.href.split(/\/(?!.*\/)/)[1].split(/\.(?!.*\.)/)[0],
   components: {
 
   },
