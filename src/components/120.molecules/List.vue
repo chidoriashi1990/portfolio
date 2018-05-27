@@ -19,9 +19,9 @@ export default {
           to: '/'
         },
         {
-          title: 'About',
-          icon: 'question_answer',
-          to: '/About'
+          title: 'LayoutCard',
+          icon: 'sim_card',
+          to: '/LayoutCard'
         }
       ]
     }

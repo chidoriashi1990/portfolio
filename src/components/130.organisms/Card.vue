@@ -47,9 +47,54 @@ export default {
           color: 'teal'
         },
         {
+          class: 'hidden-xs-and-down',
+          msg: '縦向きスマートフォン(<600px)より小さいとき隠す',
+          color: 'green'
+        },
+        {
+          class: 'hidden-sm-and-down',
+          msg: '横向きスマートフォン(600px > < 960px)より小さいとき隠す',
+          color: 'light-green'
+        },
+        {
+          class: 'hidden-md-and-down',
+          msg: 'ノートパソコン(960px > < 1264*)より小さいとき隠す',
+          color: 'lime'
+        },
+        {
           class: 'hidden-lg-and-down',
           msg: 'デスクトップ(1264 > < 1904px*)より小さいとき隠す',
           color: 'orange'
+        },
+        {
+          class: 'hidden-xl-and-down',
+          msg: '4kモニター(> 1904px*)より小さいとき隠す',
+          color: 'amber'
+        },
+        {
+          class: 'hidden-xs-and-up',
+          msg: '縦向きスマートフォン(<600px)より大きいとき隠す',
+          color: 'deep-orange'
+        },
+        {
+          class: 'hidden-sm-and-up',
+          msg: '横向きスマートフォン(600px > < 960px)より大きいとき隠す',
+          color: 'blue-grey'
+        },
+        {
+          class: 'hidden-md-and-up',
+          msg: 'ノートパソコン(960px > < 1264*)より大きいとき隠す',
+          color: 'grey'
+        },
+        {
+          class: 'hidden-lg-and-up',
+          msg: 'デスクトップ(1264 > < 1904px*)より大きいとき隠す',
+          color: 'black'
+        },
+        {
+          class: 'hidden-xl-and-up',
+          msg: '4kモニター(> 1904px*)より大きいとき隠す',
+          color: 'brown'
         }
       ]
     }
