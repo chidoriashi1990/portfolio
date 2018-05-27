@@ -26,8 +26,14 @@
       </v-container>
     </v-content>
     <!-- フッター -->
-    <v-footer color="blue darken-3" app>
-      <v-toolbar-title class="white--text">What is Atomic Design</v-toolbar-title>
+    <v-footer color="blue darken-3" height="50" app>
+      <v-toolbar-title></v-toolbar-title>
+      <!-- Floating Action Button -->
+      <v-card-text class="floating-action-button">
+        <v-btn absolute dark fab top right color="pink">
+          <v-icon>add</v-icon>
+        </v-btn>
+      </v-card-text>
     </v-footer>
   </v-app>
 </template>

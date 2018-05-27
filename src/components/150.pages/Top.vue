@@ -1,19 +1,19 @@
 <template>
-  <div id="Top">
-  </div>
+  <center-card/>
 </template>
 
 <script>
-// import sample from './../sample/sample.json'
+import CenterCard from '@/components/140.templates/CenterCard'
 
 export default {
   name: location.href.split(/\/(?!.*\/)/)[1].split(/\.(?!.*\.)/)[0],
   components: {
-
+    CenterCard
   },
   data () {
     return {
-      source: []
+      items: [
+      ]
     }
   },
   methods: {
