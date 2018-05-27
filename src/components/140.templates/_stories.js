@@ -13,17 +13,8 @@ import { storiesOf } from '@storybook/vue'
 // import VueInfoAddon from 'storybook-addon-vue-info'
 
 /* components */
-import SingleContent from './sample/SingleContent'
-import OneColTwoRow from './sample/OneColTwoRow'
-
 storiesOf('Templates', module)
   .add('single-content', () => ({
-    components: { SingleContent },
-    template: '<single-content></single-content>',
-    methods: { }
   }))
   .add('one-col-two-row', () => ({
-    components: { OneColTwoRow },
-    template: '<one-col-two-row></one-col-two-row>',
-    methods: { }
   }))

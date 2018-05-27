@@ -13,12 +13,5 @@ import { storiesOf } from '@storybook/vue'
 import VueInfoAddon from 'storybook-addon-vue-info'
 
 /* components */
-import AuthForm from './sample/AuthForm'
-
 storiesOf('Molecules', module)
   .addDecorator(VueInfoAddon)
-  .add('auth-form', () => ({
-    components: { AuthForm },
-    template: '<auth-form></auth-form>',
-    methods: { }
-  }))
