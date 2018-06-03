@@ -17,12 +17,12 @@ export default {
           title: 'Top',
           icon: 'home',
           to: '/'
-        },
-        {
-          title: 'LayoutCard',
-          icon: 'sim_card',
-          to: '/LayoutCard'
         }
+        // {
+        //   title: 'LayoutCard',
+        //   icon: 'sim_card',
+        //   to: '/LayoutCard'
+        // }
       ]
     }
   }
