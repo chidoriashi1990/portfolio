@@ -1,16 +1,7 @@
 <template>
   <v-app>
-    <!-- ツールバー・ナビゲーション -->
-    <!-- ナビゲーション -->
-    <v-navigation-drawer v-model="drawer" fixed clipped app dark>
-      <!-- リンク -->
-      <list/>
-      <!-- ユーザーグループ -->
-      <list-group/>
-    </v-navigation-drawer>
     <!-- ツールバー -->
     <v-toolbar clipped-left app dark height="60">
-      <v-toolbar-side-icon class="white--text" @click.stop="drawer = !drawer"/>
       <v-toolbar-title class="white--text">What is Atomic Design</v-toolbar-title>
       <v-spacer/>
       <v-btn icon>
