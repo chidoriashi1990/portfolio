@@ -2,14 +2,14 @@
   <v-app>
     <!-- ツールバー・ナビゲーション -->
     <!-- ナビゲーション -->
-    <v-navigation-drawer v-model="drawer" fixed clipped app>
+    <v-navigation-drawer v-model="drawer" fixed clipped app dark>
       <!-- リンク -->
       <list/>
       <!-- ユーザーグループ -->
       <list-group/>
     </v-navigation-drawer>
     <!-- ツールバー -->
-    <v-toolbar color="blue darken-3" clipped-left app>
+    <v-toolbar clipped-left app dark height="60">
       <v-toolbar-side-icon class="white--text" @click.stop="drawer = !drawer"/>
       <v-toolbar-title class="white--text">What is Atomic Design</v-toolbar-title>
       <v-spacer/>
@@ -26,7 +26,7 @@
       </v-container>
     </v-content>
     <!-- フッター -->
-    <v-footer color="blue darken-3" height="50" app>
+    <v-footer height="50" app dark>
       <v-toolbar-title></v-toolbar-title>
     </v-footer>
   </v-app>
