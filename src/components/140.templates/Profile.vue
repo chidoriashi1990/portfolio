@@ -1,20 +1,22 @@
 <template>
   <div id="Profile">
-    <v-jumbotron>
-      <v-container fill-height>
-        <v-layout align-center>
-          <v-flex text-xs-center>
-            <h3 class="display-3">Gradient over Image</h3>
-          </v-flex>
-        </v-layout>
-      </v-container>
-    </v-jumbotron>
+    <img src="https://chidoriashi1990.github.io/static/img/g4712.6609c58.png">
 
-    <v-content>
-      <v-container app>
-        <img src="./../../assets/profile/g4712.png" alt="">
-      </v-container>
-    </v-content>
+    <v-parallax id="whoAmI" src="https://chidoriashi1990.github.io/static/img/g4712.6609c58.png" height="600">
+      <v-layout align-center>
+        <v-flex text-xs-center>
+          <h3 class="display-4 indigo--text">Who am I ?</h3>
+        </v-flex>
+      </v-layout>
+    </v-parallax>
+
+    <v-parallax id="works" src="https://chidoriashi1990.github.io/static/img/g4712.6609c58.png" height="600">
+      <v-layout align-center>
+        <v-flex text-xs-center>
+          <h3 class="display-4 indigo--text">Works</h3>
+        </v-flex>
+      </v-layout>
+    </v-parallax>
 
     <!-- Return top -->
     <v-fab-transition>
