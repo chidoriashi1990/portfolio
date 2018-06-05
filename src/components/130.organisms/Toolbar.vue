@@ -1,6 +1,6 @@
 <template>
   <!-- ツールバー -->
-  <v-toolbar scroll-off-screen scroll-threshold="60" clipped-left app dark height="60">
+  <v-toolbar clipped-left app dark height="60">
     <v-toolbar-title class="white--text">
       github.io
     </v-toolbar-title>
@@ -21,23 +21,13 @@
 <script>
 export default {
   name: location.href.split(/\/(?!.*\/)/)[1].split(/\.(?!.*\.)/)[0],
-  methods: {
-    onScroll (e) {
-      this.offsetTop = window.pageYOffset || document.documentElement.scrollTop
-    }
-  },
   data: () => ({
-    // Scroll
-    offsetTop: 0,
     linkItems: [
       { icon: '', label: 'HOME', to: '#top' },
       { icon: '', label: 'Content 1', to: '#top' },
       { icon: '', label: 'Content 2', to: '#top' }
     ]
-  }),
-  computed: {
-    isShowToolbar () { return this.offsetTop > 100 }
-  }
+  })
 }
 </script>
 
