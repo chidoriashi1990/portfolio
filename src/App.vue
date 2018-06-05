@@ -5,7 +5,7 @@
     <transition>
     <router-view/>
     </transition>
-    <my-footer/>
+    <!-- <my-footer/> -->
   </v-app>
 </template>
 
