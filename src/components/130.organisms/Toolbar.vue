@@ -4,6 +4,7 @@
     <v-toolbar-title class="white--text">
       github.io
     </v-toolbar-title>
+    <v-btn flat icon disabled/>
     <!-- リンクボタン -->
     <v-toolbar-items v-for="item in linkItems" v-bind:key="item.label">
       <v-btn flat @click="$vuetify.goTo(item.to, option)">{{ item.label }}</v-btn>
@@ -24,8 +25,8 @@ export default {
   data: () => ({
     linkItems: [
       { icon: '', label: 'HOME', to: '#top' },
-      { icon: '', label: 'Content 1', to: '#top' },
-      { icon: '', label: 'Content 2', to: '#top' }
+      { icon: '', label: 'Who am I ?', to: '#whoAmI' },
+      { icon: '', label: 'Works', to: '#works' }
     ]
   })
 }
