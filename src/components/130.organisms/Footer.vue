@@ -1,6 +1,6 @@
 <template>
   <!-- フッター -->
-  <v-footer height="50" app fixed dark>
+  <v-footer height="50" app fixed>
     <v-flex xs12 py-3 text-xs-center>
       &copy;{{ new Date().getFullYear() }} — <strong>Yusuke Miyakawa</strong>
     </v-flex>
