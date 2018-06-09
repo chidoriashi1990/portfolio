@@ -1,6 +1,5 @@
 <template>
   <v-app>
-    <!-- コンテンツ -->
     <transition>
     <router-view/>
     </transition>
