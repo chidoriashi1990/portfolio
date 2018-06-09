@@ -1,6 +1,6 @@
 <template>
   <!-- ツールバー -->
-  <v-toolbar scroll-off-screen scroll-threshold="60" clipped-left app dark height="60">
+  <v-toolbar clipped-left app dark height="60">
     <v-toolbar-title class="white--text">
       github.io
     </v-toolbar-title>
