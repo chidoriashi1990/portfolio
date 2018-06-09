@@ -1,8 +1,8 @@
 <template>
   <div id="Profile">
-    <img src="https://chidoriashi1990.github.io/static/img/g4712.6609c58.png">
+    <img src="parallaxImageSrc">
 
-    <v-parallax id="whoAmI" src="https://chidoriashi1990.github.io/static/img/g4712.6609c58.png" height="600">
+    <v-parallax id="whoAmI" src="parallaxImageSrc" height="600">
       <v-layout align-center>
         <v-flex text-xs-center>
           <h3 class="display-4 indigo--text">Who am I ?</h3>
@@ -10,7 +10,7 @@
       </v-layout>
     </v-parallax>
 
-    <v-parallax id="works" src="https://chidoriashi1990.github.io/static/img/g4712.6609c58.png" height="600">
+    <v-parallax id="works" src="parallaxImageSrc" height="600">
       <v-layout align-center>
         <v-flex text-xs-center>
           <h3 class="display-4 indigo--text">Works</h3>
@@ -36,6 +36,8 @@ export default {
   },
   data () {
     return {
+      parallaxImageSrc: './../../assets/profile/g4712.jpg',
+      // Return top option
       option: {
         duration: 800
       }
