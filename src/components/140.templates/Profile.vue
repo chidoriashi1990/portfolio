@@ -10,21 +10,40 @@
       </v-parallax>
     </section>
     <!-- main contents -->
-    <v-container>
-      <v-layout row>
-        <v-flex xs12 offset-xs0 md8 offset-md2 lg8 offset-lg2>
-
-          <!-- Card -->
-          <v-card>
-            <v-card-title primary-title>
-              <v-flex>
+    <section>
+      <v-container fluid>
+        <v-layout wrap row>
+          <v-flex xs12 offset-xs0 md8 offset-md2 lg8 offset-lg2>
+            <!-- Card -->
+            <v-card>
+              <v-card-title primary-title>
                 <div class="headline">Card Title</div>
-                <div v-for="n in 100" :key="n">Listen to your favorite artists and albums whenever and wherever, online and offline.</div>
-              </v-flex>
-            </v-card-title>
-            <v-card-actions/>
-          </v-card>
+                <div>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div>
+              </v-card-title>
+            </v-card>
+          </v-flex>
+        </v-layout>
+      </v-container>
+    </section>
 
+    <v-container grid-list-xl>
+      <v-layout row>
+        <v-flex xs12 md4 v-for="n in 3" :key="n">
+          <!-- Card -->
+          <v-card class="elevation-0 transparent">
+            <!-- icon -->
+            <v-card-text class="text-xs-center">
+              <div class="headline">Card Title</div>
+            </v-card-text>
+            <!-- title -->
+            <v-card-title primary-title class="layout justify-center">
+              <div class="headline">Fast development</div>
+            </v-card-title>
+            <!-- text -->
+            <v-card-text>
+              XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+            </v-card-text>
+          </v-card>
         </v-flex>
       </v-layout>
     </v-container>
@@ -36,6 +55,7 @@
         <v-icon>keyboard_arrow_up</v-icon>
       </v-btn>
     </v-fab-transition>
+
   </v-content>
 </template>
 
