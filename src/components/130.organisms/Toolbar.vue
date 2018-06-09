@@ -1,12 +1,11 @@
 <template>
   <!-- ツールバー -->
-  <v-toolbar clipped-left app dark height="60">
-    <v-toolbar-title class="white--text">
+  <v-toolbar app dark dense height="60">
+    <v-toolbar-title class="white--text mr-5">
       github.io
     </v-toolbar-title>
-    <v-btn flat icon disabled/>
     <!-- リンクボタン -->
-    <v-toolbar-items v-for="item in linkItems" v-bind:key="item.label">
+    <v-toolbar-items v-for="item in linkItems" v-bind:key="item.label" class="hidden-sm-and-down">
       <v-btn flat @click="$vuetify.goTo(item.to, option)">{{ item.label }}</v-btn>
     </v-toolbar-items>
     <v-spacer/>
