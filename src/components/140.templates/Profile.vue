@@ -1,22 +1,33 @@
 <template>
-  <div id="Profile">
-    <img src="parallaxImageSrc">
+  <v-content>
+    <!-- parallax image -->
+    <section>
+      <v-parallax :src="require('./../../assets/profile/g4712_h.jpg')" height="400">
+        <v-layout column align-center justify-center class="indigo--text">
+          <h1 class="display-2 mb-2 text-xs-center">Mesh Portal</h1>
+          <div class="subheading mb-3 text-xs-center">Yusuke's portfolio</div>
+        </v-layout>
+      </v-parallax>
+    </section>
+    <!-- main contents -->
+    <v-container>
+      <v-layout row>
+        <v-flex xs12 offset-xs0 md8 offset-md2 lg8 offset-lg2>
 
-    <v-parallax id="whoAmI" src="parallaxImageSrc" height="600">
-      <v-layout align-center>
-        <v-flex text-xs-center>
-          <h3 class="display-4 indigo--text">Who am I ?</h3>
+          <!-- Card -->
+          <v-card>
+            <v-card-title primary-title>
+              <v-flex>
+                <div class="headline">Card Title</div>
+                <div v-for="n in 100" :key="n">Listen to your favorite artists and albums whenever and wherever, online and offline.</div>
+              </v-flex>
+            </v-card-title>
+            <v-card-actions/>
+          </v-card>
+
         </v-flex>
       </v-layout>
-    </v-parallax>
-
-    <v-parallax id="works" src="parallaxImageSrc" height="600">
-      <v-layout align-center>
-        <v-flex text-xs-center>
-          <h3 class="display-4 indigo--text">Works</h3>
-        </v-flex>
-      </v-layout>
-    </v-parallax>
+    </v-container>
 
     <!-- Return top -->
     <v-fab-transition>
@@ -25,18 +36,16 @@
         <v-icon>keyboard_arrow_up</v-icon>
       </v-btn>
     </v-fab-transition>
-  </div>
+  </v-content>
 </template>
 
 <script>
 export default {
   name: location.href.split(/\/(?!.*\/)/)[1].split(/\.(?!.*\.)/)[0],
   components: {
-
   },
   data () {
     return {
-      parallaxImageSrc: './../../assets/profile/g4712.jpg',
       // Return top option
       option: {
         duration: 800
