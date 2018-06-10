@@ -12,16 +12,16 @@
 
     <!-- main contents -->
     <section>
-      <v-container class="mb-5" fluid>
+      <v-container class="mb-4" fluid>
         <v-layout wrap row>
           <v-flex xs12 offset-xs0 md8 offset-md2 lg8 offset-lg2>
             <!-- Card -->
             <v-card>
               <v-card-title primary-title>
-                <div class="headline">Card Title</div>
+                <div class="headline">{{cardItem.title}}</div>
               </v-card-title>
               <v-card-text class="card-text">
-                XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                {{cardItem.text}}
               </v-card-text>
             </v-card>
           </v-flex>
@@ -32,8 +32,8 @@
     <!-- Grid -->
     <section>
       <v-container class="mb-5" grid-list-xs>
-        <v-layout row>
-          <v-flex xs12 md4 v-for="gi in gridItems" :key="gi.title">
+        <v-layout row wrap>
+          <v-flex xs12 sm12 md4 v-for="gi in gridItems" :key="gi.title">
             <!-- Card -->
             <v-card class="elevation-0 transparent">
               <!-- icon -->
@@ -72,16 +72,21 @@ export default {
   },
   data () {
     return {
-      // Return top option
-      option: {
-        duration: 800
+      // Card Item
+      cardItem: {
+        title: 'Card Title',
+        text: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
       },
       // Grid Items
       gridItems: [
         {icon: 'A', title: 'AAA', text: 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'},
         {icon: 'B', title: 'BBB', text: 'BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB'},
         {icon: 'C', title: 'CCC', text: 'CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC'}
-      ]
+      ],
+      // Return top option
+      option: {
+        duration: 800
+      }
     }
   }
 }
