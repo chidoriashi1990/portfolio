@@ -6,7 +6,7 @@
     </v-toolbar-title>
     <!-- リンクボタン -->
     <v-toolbar-items v-for="item in linkItems" v-bind:key="item.label" class="hidden-sm-and-down">
-      <v-btn flat @click="$vuetify.goTo(item.to, option)">{{ item.label }}</v-btn>
+      <v-btn flat @click="$vuetify.goTo(item.to, scrollOption)">{{ item.label }}</v-btn>
     </v-toolbar-items>
     <v-spacer/>
     <v-tooltip left>
@@ -24,6 +24,11 @@ export default {
   props: {
     linkItems: {
       type: Array,
+      default: null,
+      required: false
+    },
+    scrollOption: {
+      type: Object,
       default: null,
       required: false
     }
