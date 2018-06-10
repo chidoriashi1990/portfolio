@@ -14,28 +14,44 @@
     </section>
 
     <section id="whoAmI">
-      <!-- headline: Who am I ? -->
-      <headline :headline="linkItems[1].label" subheading=""/>
-      <!-- card layout -->
+      <!-- headline: Who am I ? profile -->
+      <headline :headline="linkItems[1].label" subheading="Profile"/>
+
+      <!-- profile -->
       <section>
         <v-container class="mb-4" fluid>
           <v-layout wrap row>
             <v-flex xs12 offset-xs0 md8 offset-md2 lg8 offset-lg2>
-              <!-- card: Profile -->
-              <card-profile :avatarSrc="require('./../../assets/profile/g4712.jpg')" :cardItem="cardProfile" class="mb-4"/>
+              <!-- card: profile -->
+              <card-profile :avatarSrc="require('./../../assets/profile/g4712.jpg')" :cardItem="cardProfile" class="mb-4">
+                <!-- grid icon -->
+                <template slot="grid-icon">
+                  <div class="text-xs-center">
+                    <v-icon>fas fa-github</v-icon>
+                  </div>
+                </template>
+                <!-- link button -->
+                <template slot="button">
+                  <div class="text-xs-center">
+                    <v-btn dark color="indigo" :href="cardProfile.link" target="_blank">
+                      Go to GitHub
+                    </v-btn>
+                  </div>
+                </template>
+              </card-profile>
             </v-flex>
           </v-layout>
         </v-container>
       </section>
+
+      <!-- headline: Who am I ? profile -->
+      <headline headline="" subheading="Programming language I have used"/>
     </section>
 
     <section id="works">
       <!-- headline: Works -->
       <headline :headline="linkItems[2].label" subheading="GitHub Repositories"/>
-      <grid-items gridSystem="xs12 sm12 md4" :gridItems="worksGitHubItems" flat/>
-
-      <headline headline="" subheading="Other"/>
-      <grid-items gridSystem="xs12 sm12 md4" :gridItems="worksGitHubItems"/>
+      <grid-items gridSystem="xs12 sm12 md4" :gridItems="worksGitHubItems" flat height="220"/>
     </section>
 
     <!-- Return top -->
@@ -71,7 +87,6 @@ export default {
   },
   data () {
     return {
-      myGithubUrl: 'https://github.com/chidoriashi1990/',
       linkItems: [
         { icon: '', label: 'TOP', to: '#top' },
         { icon: '', label: 'Who am I ?', to: '#whoAmI' },
@@ -80,27 +95,28 @@ export default {
       // Card Item
       cardProfile: {
         name: 'Yusuke Miyakawa',
-        text: ''
+        text: '',
+        link: 'https://github.com/chidoriashi1990'
       },
       // Grid Items
       worksGitHubItems: [
         {
           media: '',
           title: 'Template-Vue-Project',
-          text: 'XXXXXXXXXXXXXXXX',
-          link: this.myGithubUrl + 'Template-Vue-Project'
+          text: 'Project model that incorporates Vue-Cli, Vuex and Storybook',
+          link: 'https://github.com/chidoriashi1990/Template-Vue-Project'
         },
         {
           media: '',
           title: 'my-github-pages',
-          text: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
-          link: this.myGithubUrl + 'my-github-pages'
+          text: 'This is my github.io source code',
+          link: 'https://github.com/chidoriashi1990/my-github-pages'
         },
         {
           media: '',
           title: 'ocr',
-          text: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
-          link: this.myGithubUrl + 'ocr'
+          text: 'OCR system by TensorFlow and Python 3',
+          link: 'https://github.com/chidoriashi1990/ocr'
         }
       ],
       // Return top option
