@@ -1,7 +1,7 @@
 <template>
   <v-content>
 
-    <my-toolbar :linkItems="linkItems" />
+    <my-toolbar :linkItems="linkItems" :scrollOption="option"/>
 
     <!-- parallax image -->
     <section>
@@ -13,23 +13,30 @@
       </v-parallax>
     </section>
 
-    <!-- headline -->
-    <headline :headline="linkItems[1].label" :subheading="b"/>
-
-    <!-- card layout -->
-    <section>
-      <v-container class="mb-4" fluid>
-        <v-layout wrap row>
-          <v-flex xs12 offset-xs0 md8 offset-md2 lg8 offset-lg2>
-            <!-- Card -->
-            <card :cardItem="cardItem"/>
-          </v-flex>
-        </v-layout>
-      </v-container>
+    <section id="whoAmI">
+      <!-- headline: Who am I ? -->
+      <headline :headline="linkItems[1].label" subheading=""/>
+      <!-- card layout -->
+      <section>
+        <v-container class="mb-4" fluid>
+          <v-layout wrap row>
+            <v-flex xs12 offset-xs0 md8 offset-md2 lg8 offset-lg2>
+              <!-- card: Profile -->
+              <card-profile :avatarSrc="require('./../../assets/profile/g4712.jpg')" :cardItem="cardProfile" class="mb-4"/>
+            </v-flex>
+          </v-layout>
+        </v-container>
+      </section>
     </section>
 
-    <!-- Grid -->
-    <grid-items gridSystem="xs12 sm12 md4" :gridItems="gridItems"/>
+    <section id="works">
+      <!-- headline: Works -->
+      <headline :headline="linkItems[2].label" subheading="GitHub Repositories"/>
+      <grid-items gridSystem="xs12 sm12 md4" :gridItems="worksGitHubItems" flat/>
+
+      <headline headline="" subheading="Other"/>
+      <grid-items gridSystem="xs12 sm12 md4" :gridItems="worksGitHubItems"/>
+    </section>
 
     <!-- Return top -->
     <v-fab-transition>
@@ -45,9 +52,10 @@
 </template>
 
 <script>
-import MyToolbar from '@/components/130.organisms/Toolbar'
-import MyFooter from '@/components/130.organisms/Footer'
+import MyToolbar from './../130.organisms/Toolbar'
+import MyFooter from './../130.organisms/Footer'
 import Headline from './../120.molecules/Headline'
+import CardProfile from './../120.molecules/CardProfile'
 import Card from './../120.molecules/Card'
 import GridItems from './../120.molecules/GridItems'
 
@@ -57,30 +65,48 @@ export default {
     MyToolbar,
     MyFooter,
     Headline,
+    CardProfile,
     Card,
     GridItems
   },
   data () {
     return {
+      myGithubUrl: 'https://github.com/chidoriashi1990/',
       linkItems: [
         { icon: '', label: 'TOP', to: '#top' },
         { icon: '', label: 'Who am I ?', to: '#whoAmI' },
         { icon: '', label: 'Works', to: '#works' }
       ],
       // Card Item
-      cardItem: {
-        title: 'Card Title',
-        text: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+      cardProfile: {
+        name: 'Yusuke Miyakawa',
+        text: ''
       },
       // Grid Items
-      gridItems: [
-        {icon: 'A', title: 'AAA', text: 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'},
-        {icon: 'B', title: 'BBB', text: 'BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB'},
-        {icon: 'C', title: 'CCC', text: 'CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC'}
+      worksGitHubItems: [
+        {
+          media: '',
+          title: 'Template-Vue-Project',
+          text: 'XXXXXXXXXXXXXXXX',
+          link: this.myGithubUrl + 'Template-Vue-Project'
+        },
+        {
+          media: '',
+          title: 'my-github-pages',
+          text: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+          link: this.myGithubUrl + 'my-github-pages'
+        },
+        {
+          media: '',
+          title: 'ocr',
+          text: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+          link: this.myGithubUrl + 'ocr'
+        }
       ],
       // Return top option
       option: {
-        duration: 800
+        duration: 800,
+        offset: -100
       }
     }
   }
