@@ -45,7 +45,7 @@
       </section>
 
       <!-- headline: Who am I ? profile -->
-      <headline headline="" subheading="Programming language I have used"/>
+      <!-- <headline headline="" subheading="Programming language I have used"/> -->
     </section>
 
     <section id="works">
