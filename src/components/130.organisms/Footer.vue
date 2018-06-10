@@ -2,7 +2,7 @@
   <!-- フッター -->
   <v-footer app dark absolute>
     <v-flex xs12 text-xs-center>
-      &copy;{{ new Date().getFullYear() }} — <strong>Yusuke Miyakawa</strong>
+      Made by <strong>Yusuke Miyakawa</strong> @ {{ new Date().getFullYear() }}
     </v-flex>
   </v-footer>
 </template>

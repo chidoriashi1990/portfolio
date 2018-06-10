@@ -1,5 +1,8 @@
 <template>
   <v-content>
+
+    <my-toolbar :linkItems="linkItems" />
+
     <!-- parallax image -->
     <section>
       <v-parallax :src="require('./../../assets/profile/g4712_h.jpg')" class="mb-5" height="400">
@@ -10,49 +13,23 @@
       </v-parallax>
     </section>
 
-    <!-- main contents -->
+    <!-- headline -->
+    <headline :headline="linkItems[1].label" :subheading="b"/>
+
+    <!-- card layout -->
     <section>
       <v-container class="mb-4" fluid>
         <v-layout wrap row>
           <v-flex xs12 offset-xs0 md8 offset-md2 lg8 offset-lg2>
             <!-- Card -->
-            <v-card>
-              <v-card-title primary-title>
-                <div class="headline">{{cardItem.title}}</div>
-              </v-card-title>
-              <v-card-text class="card-text">
-                {{cardItem.text}}
-              </v-card-text>
-            </v-card>
+            <card :cardItem="cardItem"/>
           </v-flex>
         </v-layout>
       </v-container>
     </section>
 
     <!-- Grid -->
-    <section>
-      <v-container class="mb-5" grid-list-xs>
-        <v-layout row wrap>
-          <v-flex xs12 sm12 md4 v-for="gi in gridItems" :key="gi.title">
-            <!-- Card -->
-            <v-card class="elevation-0 transparent">
-              <!-- icon -->
-              <v-card-text class="text-xs-center">
-                <div class="headline">{{gi.icon}}</div>
-              </v-card-text>
-              <!-- title -->
-              <v-card-title primary-title class="layout justify-center">
-                <div class="headline">{{gi.title}}</div>
-              </v-card-title>
-              <!-- text -->
-              <v-card-text class="card-text">
-                  {{gi.text}}
-              </v-card-text>
-            </v-card>
-          </v-flex>
-        </v-layout>
-      </v-container>
-    </section>
+    <grid-items gridSystem="xs12 sm12 md4" :gridItems="gridItems"/>
 
     <!-- Return top -->
     <v-fab-transition>
@@ -62,16 +39,34 @@
       </v-btn>
     </v-fab-transition>
 
+    <my-footer/>
+
   </v-content>
 </template>
 
 <script>
+import MyToolbar from '@/components/130.organisms/Toolbar'
+import MyFooter from '@/components/130.organisms/Footer'
+import Headline from './../120.molecules/Headline'
+import Card from './../120.molecules/Card'
+import GridItems from './../120.molecules/GridItems'
+
 export default {
   name: location.href.split(/\/(?!.*\/)/)[1].split(/\.(?!.*\.)/)[0],
   components: {
+    MyToolbar,
+    MyFooter,
+    Headline,
+    Card,
+    GridItems
   },
   data () {
     return {
+      linkItems: [
+        { icon: '', label: 'TOP', to: '#top' },
+        { icon: '', label: 'Who am I ?', to: '#whoAmI' },
+        { icon: '', label: 'Works', to: '#works' }
+      ],
       // Card Item
       cardItem: {
         title: 'Card Title',

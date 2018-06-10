@@ -21,13 +21,13 @@
 <script>
 export default {
   name: location.href.split(/\/(?!.*\/)/)[1].split(/\.(?!.*\.)/)[0],
-  data: () => ({
-    linkItems: [
-      { icon: '', label: 'HOME', to: '#top' },
-      { icon: '', label: 'Who am I ?', to: '#whoAmI' },
-      { icon: '', label: 'Works', to: '#works' }
-    ]
-  })
+  props: {
+    linkItems: {
+      type: Array,
+      default: null,
+      required: false
+    }
+  }
 }
 </script>
 
