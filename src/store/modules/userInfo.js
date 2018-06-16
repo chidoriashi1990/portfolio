@@ -1,9 +1,12 @@
 /**
  * moduleUserInfo:
  * ユーザー情報のStoreを管理するモジュール
+ *
+ * Tips:
+ * this.$store.getters['userInfo/id']
+ * this.$store.dispatch['userInfo/id']
  */
 export default {
-  // 名前空間を付与する
   namespaced: true,
   /* state: Storeの状態 */
   state: {
