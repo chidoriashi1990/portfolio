@@ -120,9 +120,9 @@ export default {
       worksGitHubItems: [
         {
           media: 'https://chidoriashi1990.github.io/static/img/Template-Vue-Project.jpg',
-          title: 'Template-Vue-Project',
-          text: 'Project model that incorporates Vue-Cli, Vuex and Storybook',
-          link: 'https://github.com/chidoriashi1990/Template-Vue-Project'
+          title: 'template-vuejs-project',
+          text: 'Project model that incorporates Vue-Cli, Vuex, Vuetify and Storybook',
+          link: 'https://github.com/chidoriashi1990/template-vuejs-project'
         },
         {
           media: 'https://chidoriashi1990.github.io/static/img/g4712.5e06d9f.jpg',
