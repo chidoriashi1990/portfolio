@@ -119,7 +119,7 @@ export default {
       // Grid Items
       worksGitHubItems: [
         {
-          media: 'https://chidoriashi1990.github.io/static/img/Template-Vue-Project.jpg',
+          media: 'https://chidoriashi1990.github.io/img/Template-Vue-Project.jpg',
           title: 'template-vuejs-project',
           text: 'Project model that incorporates Vue-Cli, Vuex, Vuetify and Storybook',
           link: 'https://github.com/chidoriashi1990/template-vuejs-project'
@@ -131,7 +131,7 @@ export default {
           link: 'https://github.com/chidoriashi1990/my-github-pages'
         },
         {
-          media: 'https://chidoriashi1990.github.io/static/img/OCR_Hollowing.png',
+          media: 'https://chidoriashi1990.github.io/img/OCR_Hollowing.png',
           title: 'ocr',
           text: 'OCR system by TensorFlow and Python 3',
           link: 'https://github.com/chidoriashi1990/ocr'
