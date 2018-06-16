@@ -116,7 +116,7 @@ export default {
       // Grid Items
       worksGitHubItems: [
         {
-          media: 'https://chidoriashi1990.github.io/static/works/Template-Vue-Project.jpg',
+          media: 'https://chidoriashi1990.github.io/static/img/Template-Vue-Project.jpg',
           title: 'Template-Vue-Project',
           text: 'Project model that incorporates Vue-Cli, Vuex and Storybook',
           link: 'https://github.com/chidoriashi1990/Template-Vue-Project'
