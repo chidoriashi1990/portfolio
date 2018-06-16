@@ -125,7 +125,7 @@ export default {
           link: 'https://github.com/chidoriashi1990/Template-Vue-Project'
         },
         {
-          media: 'http://localhost:8080/static/img/g4712.5e06d9f.jpg',
+          media: 'https://chidoriashi1990.github.io/static/img/g4712.5e06d9f.jpg',
           title: 'my-github-pages',
           text: 'This is my github.io source code',
           link: 'https://github.com/chidoriashi1990/my-github-pages'
