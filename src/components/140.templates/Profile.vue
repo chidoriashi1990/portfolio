@@ -51,7 +51,20 @@
     <section id="works">
       <!-- headline: Works -->
       <headline :headline="linkItems[2].label" subheading="GitHub Repositories"/>
-      <grid-items gridSystem="xs12 sm12 md4" :gridItems="worksGitHubItems" flat height="220"/>
+
+      <v-container class="mb-5" grid-list-xs>
+        <v-layout row wrap>
+          <v-flex xs12 sm12 md4 v-bind:class="gridSystem" v-for="(gi, index) in worksGitHubItems" :key="index">
+            <grid-item flat :title="gi.title" :text="gi.text" :link="gi.link">
+              <template slot-scope="media">
+                <div class="text-xs-center">
+                  <img :src="gi.media">
+                </div>
+              </template>
+            </grid-item>
+          </v-flex>
+        </v-layout>
+      </v-container>
     </section>
 
     <!-- Return top -->
@@ -74,6 +87,7 @@ import Headline from './../120.molecules/Headline'
 import CardProfile from './../120.molecules/CardProfile'
 import Card from './../120.molecules/Card'
 import GridItems from './../120.molecules/GridItems'
+import GridItem from './../120.molecules/GridItem'
 
 export default {
   name: location.href.split(/\/(?!.*\/)/)[1].split(/\.(?!.*\.)/)[0],
@@ -83,7 +97,8 @@ export default {
     Headline,
     CardProfile,
     Card,
-    GridItems
+    GridItems,
+    GridItem
   },
   data () {
     return {
@@ -101,7 +116,7 @@ export default {
       // Grid Items
       worksGitHubItems: [
         {
-          media: '',
+          media: 'https://chidoriashi1990.github.io/static/works/Template-Vue-Project.jpg',
           title: 'Template-Vue-Project',
           text: 'Project model that incorporates Vue-Cli, Vuex and Storybook',
           link: 'https://github.com/chidoriashi1990/Template-Vue-Project'

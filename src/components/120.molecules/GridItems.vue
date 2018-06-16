@@ -2,7 +2,7 @@
   <section>
     <v-container class="mb-5" grid-list-xs>
       <v-layout row wrap>
-        <v-flex v-bind:class="gridSystem" v-for="gi in gridItems" :key="gi.title">
+        <v-flex v-bind:class="gridSystem" v-for="(gi, index) in gridItems" :key="index">
           <!-- Card -->
           <v-card v-bind:class="flat" class="mx-3 my-2" :height="height">
             <!-- title -->
@@ -14,7 +14,7 @@
                 {{gi.text}}
             </v-card-text>
             <!-- actions -->
-            <v-card-actions style="position: absolute; bottom: 0;">
+            <v-card-actions>
               <v-btn flat color="indigo" :href="gi.link" target="_blank">Explore</v-btn>
             </v-card-actions>
           </v-card>
@@ -27,6 +27,11 @@
 <script>
 export default {
   name: location.href.split(/\/(?!.*\/)/)[1].split(/\.(?!.*\.)/)[0],
+  methods: {},
+  data () {
+    return {
+    }
+  },
   props: {
     gridSystem: {
       type: String,
