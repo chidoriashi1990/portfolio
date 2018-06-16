@@ -51,14 +51,17 @@
     <section id="works">
       <!-- headline: Works -->
       <headline :headline="linkItems[2].label" subheading="GitHub Repositories"/>
-
+      <!-- Repositories -->
       <v-container class="mb-5" grid-list-xs>
         <v-layout row wrap>
           <v-flex xs12 sm12 md4 v-bind:class="gridSystem" v-for="(gi, index) in worksGitHubItems" :key="index">
             <grid-item flat :title="gi.title" :text="gi.text" :link="gi.link">
-              <template slot-scope="media">
+              <template slot="media">
+                <!-- Repositories: Image -->
                 <div class="text-xs-center">
-                  <img :src="gi.media">
+                  <v-avatar slot="activator" size="144px" class="elevation-7 my-3">
+                    <img :src="gi.media">
+                  </v-avatar>
                 </div>
               </template>
             </grid-item>
@@ -122,13 +125,13 @@ export default {
           link: 'https://github.com/chidoriashi1990/Template-Vue-Project'
         },
         {
-          media: '',
+          media: 'http://localhost:8080/static/img/g4712.5e06d9f.jpg',
           title: 'my-github-pages',
           text: 'This is my github.io source code',
           link: 'https://github.com/chidoriashi1990/my-github-pages'
         },
         {
-          media: '',
+          media: 'https://chidoriashi1990.github.io/static/img/OCR_Hollowing.png',
           title: 'ocr',
           text: 'OCR system by TensorFlow and Python 3',
           link: 'https://github.com/chidoriashi1990/ocr'
