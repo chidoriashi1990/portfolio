@@ -141,6 +141,10 @@ export default {
       // Chip Used Program List
       usedProgramList: [
         {
+          media: 'https://upload.wikimedia.org/wikipedia/commons/8/80/HTML5_logo_resized.svg',
+          text: 'HTML5'
+        },
+        {
           media: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png',
           text: 'JavaScript'
         },
