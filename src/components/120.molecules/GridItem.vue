@@ -10,7 +10,7 @@
       <!-- chips -->
       <slot name="chips"></slot>
       <!-- text -->
-      <v-card-text class="card-text mx-2" v-bind:class="{displayNone: textDisable}">
+      <v-card-text class="card-text mx-2" v-bind:class="{displayNone: textDisable}" style="min-height: 100px;">
           {{text}}
       </v-card-text>
       <!-- actions -->

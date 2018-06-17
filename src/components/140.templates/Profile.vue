@@ -82,7 +82,7 @@
               </template>
               <!-- Chips -->
               <template slot="chips">
-                <chip-items :chips=gi.chips />
+                <chip-items :chips=gi.chips style="min-height: 100px;"/>
               </template>
             </grid-item>
           </v-flex>
