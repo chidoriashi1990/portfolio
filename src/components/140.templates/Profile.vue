@@ -19,7 +19,7 @@
 
       <!-- profile -->
       <section>
-        <v-container class="mb-4" fluid>
+        <v-container fluid>
           <v-layout wrap row>
             <v-flex xs12 offset-xs0 md8 offset-md2 lg8 offset-lg2>
               <!-- card: profile -->
@@ -45,7 +45,23 @@
       </section>
 
       <!-- headline: Who am I ? profile -->
-      <!-- <headline headline="" subheading="Programming language I have used"/> -->
+      <headline headline="" subheading="Programming language I have used"/>
+      <v-container class="mb-5 py-0">
+        <v-layout>
+          <v-flex v-for="(p, index) in usedProgramList" :key="index" class="mx-3 text-xs-center">
+            <grid-item textDisable actionDisable :title="p.text">
+              <!-- used language -->
+              <template slot="media">
+                <div class="text-xs-center">
+                  <v-avatar slot="activator" size="144px" class="elevation-7">
+                    <img :src="p.media">
+                  </v-avatar>
+                </div>
+              </template>
+            </grid-item>
+          </v-flex>
+        </v-layout>
+      </v-container>
     </section>
 
     <section id="works">
@@ -56,13 +72,17 @@
         <v-layout row wrap>
           <v-flex xs12 sm12 md4 v-bind:class="gridSystem" v-for="(gi, index) in worksGitHubItems" :key="index">
             <grid-item flat :title="gi.title" :text="gi.text" :link="gi.link">
+              <!-- Repositories: Image -->
               <template slot="media">
-                <!-- Repositories: Image -->
                 <div class="text-xs-center">
                   <v-avatar slot="activator" size="144px" class="elevation-7 my-3">
                     <img :src="gi.media">
                   </v-avatar>
                 </div>
+              </template>
+              <!-- Chips -->
+              <template slot="chips">
+                <chip-items :chips=gi.chips />
               </template>
             </grid-item>
           </v-flex>
@@ -91,6 +111,7 @@ import CardProfile from './../120.molecules/CardProfile'
 import Card from './../120.molecules/Card'
 import GridItems from './../120.molecules/GridItems'
 import GridItem from './../120.molecules/GridItem'
+import ChipItems from './../120.molecules/ChipItems'
 
 export default {
   name: location.href.split(/\/(?!.*\/)/)[1].split(/\.(?!.*\.)/)[0],
@@ -101,7 +122,8 @@ export default {
     CardProfile,
     Card,
     GridItems,
-    GridItem
+    GridItem,
+    ChipItems
   },
   data () {
     return {
@@ -110,29 +132,64 @@ export default {
         { icon: '', label: 'Who am I ?', to: '#whoAmI' },
         { icon: '', label: 'Works', to: '#works' }
       ],
-      // Card Item
+      // Card Profile
       cardProfile: {
         name: 'Yusuke Miyakawa',
         text: '',
         link: 'https://github.com/chidoriashi1990'
       },
+      // Chip Used Program List
+      usedProgramList: [
+        {
+          media: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png',
+          text: 'JavaScript'
+        },
+        {
+          media: 'https://upload.wikimedia.org/wikipedia/commons/f/f1/Vue.png',
+          text: 'Vue.js'
+        },
+        {
+          media: 'https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg',
+          text: 'Angular'
+        }
+      ],
       // Grid Items
       worksGitHubItems: [
         {
           media: 'https://chidoriashi1990.github.io/img/Template-Vue-Project.jpg',
           title: 'template-vuejs-project',
+          chips: [
+            {text: 'Vue.js', color: 'indigo', textColor: 'white'},
+            {text: 'vue-cli', color: 'indigo', textColor: 'white'},
+            {text: 'Vuex', color: 'indigo', textColor: 'white'},
+            {text: 'vue-router', color: 'indigo', textColor: 'white'},
+            {text: 'Vuetify', color: 'indigo', textColor: 'white'},
+            {text: 'Storybook', color: 'indigo', textColor: 'white'}
+          ],
           text: 'Project model that incorporates Vue-Cli, Vuex, Vuetify and Storybook',
           link: 'https://github.com/chidoriashi1990/template-vuejs-project'
         },
         {
           media: 'https://chidoriashi1990.github.io/static/img/g4712.5e06d9f.jpg',
           title: 'my-github-pages',
+          chips: [
+            {text: 'Vue.js', color: 'indigo', textColor: 'white'},
+            {text: 'vue-cli', color: 'indigo', textColor: 'white'},
+            {text: 'Vuex', color: 'indigo', textColor: 'white'},
+            {text: 'vue-router', color: 'indigo', textColor: 'white'},
+            {text: 'Vuetify', color: 'indigo', textColor: 'white'},
+            {text: 'Storybook', color: 'indigo', textColor: 'white'}
+          ],
           text: 'This is my github.io source code',
           link: 'https://github.com/chidoriashi1990/my-github-pages'
         },
         {
           media: 'https://chidoriashi1990.github.io/img/OCR_Hollowing.png',
           title: 'ocr',
+          chips: [
+            {text: 'TensorFlow', color: 'indigo', textColor: 'white'},
+            {text: 'Python 3', color: 'indigo', textColor: 'white'}
+          ],
           text: 'OCR system by TensorFlow and Python 3',
           link: 'https://github.com/chidoriashi1990/ocr'
         }
