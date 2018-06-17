@@ -149,6 +149,14 @@ export default {
           text: 'JavaScript'
         },
         {
+          media: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg',
+          text: 'Python3'
+        },
+        {
+          media: 'https://upload.wikimedia.org/wikipedia/commons/0/0d/C_Sharp_wordmark.svg',
+          text: 'C#'
+        },
+        {
           media: 'https://upload.wikimedia.org/wikipedia/commons/f/f1/Vue.png',
           text: 'Vue.js'
         },
