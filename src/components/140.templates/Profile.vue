@@ -44,11 +44,11 @@
         </v-container>
       </section>
 
-      <!-- headline: Who am I ? profile -->
+      <!-- headline: Who am I ? Programming language I have used -->
       <headline headline="" subheading="Programming language I have used"/>
       <v-container class="mb-5 py-0">
-        <v-layout>
-          <v-flex v-for="(p, index) in usedProgramList" :key="index" class="mx-3 text-xs-center">
+        <v-layout row wrap>
+          <v-flex xs12 sm12 md3 v-for="(p, index) in usedProgramList" :key="index" class="text-xs-center">
             <grid-item textDisable actionDisable :title="p.text">
               <!-- used language -->
               <template slot="media">
