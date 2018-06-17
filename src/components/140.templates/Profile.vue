@@ -7,8 +7,8 @@
     <section>
       <v-parallax :src="require('./../../assets/profile/g4712_h.jpg')" class="mb-5" height="300">
         <v-layout column align-center justify-center class="indigo--text">
-          <h1 class="display-2 mb-2 text-xs-center">XXX</h1>
-          <div class="subheading mb-3 text-xs-center">Yusuke's portfolio</div>
+          <h1 class="display-2 mb-2 text-xs-center"></h1>
+          <div class="subheading mb-3 text-xs-center"></div>
         </v-layout>
       </v-parallax>
     </section>
