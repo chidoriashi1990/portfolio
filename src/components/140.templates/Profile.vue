@@ -87,7 +87,7 @@
 
     <section id="works">
       <!-- headline: Works -->
-      <headline :headline="linkItems[2].label" subheading="GitHub Repositories"/>
+      <headline :headline="linkItems[3].label" subheading="GitHub Repositories"/>
       <!-- Repositories -->
       <v-container class="mb-5" grid-list-xs>
         <v-layout row wrap>
