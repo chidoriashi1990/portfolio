@@ -34,6 +34,7 @@
                 <template slot="button">
                   <div class="text-xs-center">
                     <v-btn dark color="indigo" :href="cardProfile.link" target="_blank">GitHub</v-btn>
+                    <v-btn dark color="indigo" href="https://twitter.com/chidori2502" target="_blank">twitter</v-btn>
                     <v-btn dark color="indigo" href="https://qiita.com/chidoriashi1990" target="_blank">Qiita</v-btn>
                   </div>
                 </template>
