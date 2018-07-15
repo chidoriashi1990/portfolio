@@ -34,6 +34,7 @@
                 <template slot="button">
                   <div class="text-xs-center">
                     <v-btn dark color="indigo" :href="cardProfile.link" target="_blank">GitHub</v-btn>
+                    <v-btn dark color="indigo" href="https://twitter.com/MiyakawaYusuke" target="_blank">twitter</v-btn>
                     <v-btn dark color="indigo" href="https://qiita.com/chidoriashi1990" target="_blank">Qiita</v-btn>
                   </div>
                 </template>
@@ -93,7 +94,7 @@
           <v-flex xs12 sm12 md4 v-bind:class="gridSystem" v-for="(gi, index) in worksGitHubItems" :key="index">
             <grid-item flat :title="gi.title" :text="gi.text" :link="gi.link">
               <!-- Repositories: Image -->
-              <template slot="media">
+              <template v-if="gi.media != ''" slot="media">
                 <div class="text-xs-center">
                   <v-avatar slot="activator" size="144px" class="elevation-7 my-3">
                     <img :src="gi.media">
@@ -227,6 +228,21 @@ export default {
           ],
           text: 'OCR system by TensorFlow and Python 3',
           link: 'https://github.com/chidoriashi1990/ocr'
+        },
+        {
+          media: '',
+          title: 'vue-pwa-rss-reader',
+          chips: [
+            {text: 'PWA', color: 'indigo', textColor: 'white'},
+            {text: 'Vue.js', color: 'indigo', textColor: 'white'},
+            {text: 'vue-cli', color: 'indigo', textColor: 'white'},
+            {text: 'Vuex', color: 'indigo', textColor: 'white'},
+            {text: 'vue-router', color: 'indigo', textColor: 'white'},
+            {text: 'Vuetify', color: 'indigo', textColor: 'white'},
+            {text: 'Storybook', color: 'indigo', textColor: 'white'}
+          ],
+          text: 'This is a modern RSS reader made with PWA made by Vue.js.',
+          link: 'https://github.com/chidoriashi1990/vue-pwa-rss-reader'
         }
       ],
       // Return top option
