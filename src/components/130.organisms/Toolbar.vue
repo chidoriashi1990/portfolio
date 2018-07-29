@@ -11,7 +11,7 @@
     <v-spacer/>
     <v-tooltip left>
       <v-btn icon class="white" slot="activator" href="https://github.com/chidoriashi1990" target="_blank">
-        <img src="./../../assets/github/GitHub-Mark-32px.png">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="32px" height="32px">
       </v-btn>
       <span>Go to GitHub</span>
     </v-tooltip>
