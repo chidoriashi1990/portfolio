@@ -2,7 +2,7 @@
   <v-content>
 
     <my-toolbar :linkItems="linkItems" :scrollOption="option"/>
-
+ 
     <!-- parallax image -->
     <section>
       <v-parallax :src="require('./../../assets/profile/g4712_h.jpg')" class="mb-5" height="300">
