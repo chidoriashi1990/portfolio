@@ -1,4 +1,5 @@
 module.exports = {
+  mode: 'spa',
   /*
   ** Headers of the page
   */
@@ -31,7 +32,6 @@ module.exports = {
     generate: {
       dir: 'dist/app'
     },
-    mode: 'spa',
     /*
     ** Run ESLint on save
     */
