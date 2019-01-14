@@ -4,7 +4,7 @@
     <v-card v-bind:class="flat" class="mx-3 my-2" :height="height" flat>
       <slot name="media"></slot>
       <!-- title -->
-      <v-card-title primary-title v-bind:class="{'layout': true, 'justify-center': true, displayNone: titleDisable}">
+      <v-card-title primary-title v-bind:class="{'layout': true, 'justify-center': true}">
         <div class="headline">{{title}}</div>
       </v-card-title>
       <!-- chips -->
