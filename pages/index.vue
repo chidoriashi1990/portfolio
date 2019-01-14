@@ -1,14 +1,18 @@
 <template>
-  <v-app>
-  </v-app>
+  <div id="top">
+    <profile/>
+  </div>
 </template>
 
 <script>
+import Profile from './../layouts/profile'
+
 export default {
   components: {
+    Profile
   }
 }
 </script>
 
-<style>
+<style scoped>
 </style>

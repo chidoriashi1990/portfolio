@@ -7,7 +7,7 @@
 // import sample from './../sample/sample.json'
 
 export default {
-  name: location.href.split(/\/(?!.*\/)/)[1].split(/\.(?!.*\.)/)[0],
+  
   components: {
 
   },
@@ -95,6 +95,6 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 
 </style>
