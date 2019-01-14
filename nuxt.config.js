@@ -25,6 +25,13 @@ module.exports = {
   */
   build: {
     /*
+     ** CDN domain
+     */
+    publicPath: 'https://my-github-pages.herokuapp.com/',
+    generate: {
+      dir: 'dist/app'
+    },
+    /*
     ** Run ESLint on save
     */
     extend (config, { isDev, isClient }) {
