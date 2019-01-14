@@ -4,14 +4,14 @@
     <my-toolbar :linkItems="linkItems" :scrollOption="option"/>
 
     <!-- parallax image -->
-    <section>
-      <v-parallax :src="require('~/assets/profile/g4712_h.jpg')" class="mb-5" height="300">
+    <!-- <section>
+      <v-parallax :src="'https://avatars3.githubusercontent.com/u/3616178?s=400&u=31c2ba033be86ce669e96456bca7cecd1e1f769b&v=4'" class="mb-5" height="300">
         <v-layout column align-center justify-center class="indigo--text">
           <h1 class="display-2 mb-2 text-xs-center"></h1>
           <div class="subheading mb-3 text-xs-center"></div>
         </v-layout>
       </v-parallax>
-    </section>
+    </section> -->
 
     <section id="whoAmI">
       <!-- headline: Who am I ? profile -->
@@ -23,7 +23,7 @@
           <v-layout wrap row>
             <v-flex xs12 offset-xs0 md8 offset-md2 lg8 offset-lg2>
               <!-- card: profile -->
-              <card-profile :avatarSrc="require('~/assets/profile/g4712_h.jpg')" :cardItem="cardProfile" class="mb-4">
+              <card-profile :avatarSrc="'https://avatars3.githubusercontent.com/u/3616178?s=400&u=31c2ba033be86ce669e96456bca7cecd1e1f769b&v=4'" :cardItem="cardProfile" class="mb-4">
                 <!-- grid icon -->
                 <template slot="grid-icon">
                   <div class="text-xs-center">
