@@ -5,7 +5,7 @@
 
     <!-- parallax image -->
     <section>
-      <v-parallax :src="require('./../assets/profile/g4712_h.jpg')" class="mb-5" height="300">
+      <v-parallax :src="require('~/assets/profile/g4712_h.jpg')" class="mb-5" height="300">
         <v-layout column align-center justify-center class="indigo--text">
           <h1 class="display-2 mb-2 text-xs-center"></h1>
           <div class="subheading mb-3 text-xs-center"></div>
@@ -23,7 +23,7 @@
           <v-layout wrap row>
             <v-flex xs12 offset-xs0 md8 offset-md2 lg8 offset-lg2>
               <!-- card: profile -->
-              <card-profile :avatarSrc="require('./../assets/profile/g4712_h.jpg')" :cardItem="cardProfile" class="mb-4">
+              <card-profile :avatarSrc="require('~/assets/profile/g4712_h.jpg')" :cardItem="cardProfile" class="mb-4">
                 <!-- grid icon -->
                 <template slot="grid-icon">
                   <div class="text-xs-center">
@@ -94,13 +94,13 @@
           <v-flex xs12 sm12 md4 v-bind:class="gridSystem" v-for="(gi, index) in worksGitHubItems" :key="index">
             <grid-item flat :title="gi.title" :text="gi.text" :link="gi.link">
               <!-- Repositories: Image -->
-              <template v-if="gi.media != ''" slot="media">
+              <!-- <template v-if="gi.media != ''" slot="media">
                 <div class="text-xs-center">
                   <v-avatar slot="activator" size="144px" class="elevation-7 my-3">
                     <img :src="gi.media">
                   </v-avatar>
                 </div>
-              </template>
+              </template> -->
               <!-- Chips -->
               <template slot="chips">
                 <chip-items :chips=gi.chips style="min-height: 100px;"/>

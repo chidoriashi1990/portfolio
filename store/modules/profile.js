@@ -51,20 +51,6 @@ export default {
     ],
     worksGitHubItems: [
       {
-        media: 'https://chidoriashi1990.github.io/img/Template-Vue-Project.jpg',
-        title: 'template-vuejs-project',
-        chips: [
-          {text: 'Vue.js', color: 'indigo', textColor: 'white'},
-          {text: 'vue-cli', color: 'indigo', textColor: 'white'},
-          {text: 'Vuex', color: 'indigo', textColor: 'white'},
-          {text: 'vue-router', color: 'indigo', textColor: 'white'},
-          {text: 'Vuetify', color: 'indigo', textColor: 'white'},
-          {text: 'Storybook', color: 'indigo', textColor: 'white'}
-        ],
-        text: 'Project model that incorporates Vue-Cli, Vuex, Vuetify and Storybook',
-        link: 'https://github.com/chidoriashi1990/template-vuejs-project'
-      },
-      {
         media: 'https://chidoriashi1990.github.io/static/img/g4712.5e06d9f.jpg',
         title: 'my-github-pages',
         chips: [
@@ -77,31 +63,6 @@ export default {
         ],
         text: 'This is my github.io source code',
         link: 'https://github.com/chidoriashi1990/my-github-pages'
-      },
-      {
-        media: 'https://chidoriashi1990.github.io/img/OCR_Hollowing.png',
-        title: 'ocr',
-        chips: [
-          {text: 'TensorFlow', color: 'indigo', textColor: 'white'},
-          {text: 'Python 3', color: 'indigo', textColor: 'white'}
-        ],
-        text: 'OCR system by TensorFlow and Python 3',
-        link: 'https://github.com/chidoriashi1990/ocr'
-      },
-      {
-        media: '',
-        title: 'vue-pwa-rss-reader',
-        chips: [
-          {text: 'PWA', color: 'indigo', textColor: 'white'},
-          {text: 'Vue.js', color: 'indigo', textColor: 'white'},
-          {text: 'vue-cli', color: 'indigo', textColor: 'white'},
-          {text: 'Vuex', color: 'indigo', textColor: 'white'},
-          {text: 'vue-router', color: 'indigo', textColor: 'white'},
-          {text: 'Vuetify', color: 'indigo', textColor: 'white'},
-          {text: 'Storybook', color: 'indigo', textColor: 'white'}
-        ],
-        text: 'This is a modern RSS reader made with PWA made by Vue.js.',
-        link: 'https://github.com/chidoriashi1990/vue-pwa-rss-reader'
       }
     ]
   },
