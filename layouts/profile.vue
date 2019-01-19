@@ -91,7 +91,7 @@
       <!-- Repositories -->
       <v-container class="mb-5" grid-list-xs>
         <v-layout row wrap>
-          <v-flex xs12 sm12 md4 v-bind:class="gridSystem" v-for="(gi, index) in worksGitHubItems" :key="index">
+          <v-flex xs12 sm12 md4 v-for="(gi, index) in worksGitHubItems" :key="index">
             <grid-item flat :title="gi.title" :text="gi.text" :link="gi.link">
               <!-- Repositories: Image -->
               <!-- <template v-if="gi.media != ''" slot="media">

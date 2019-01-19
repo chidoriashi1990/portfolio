@@ -2,7 +2,7 @@
   <section>
     <v-container class="mb-5" grid-list-xs>
       <v-layout row wrap>
-        <v-flex v-bind:class="gridSystem" v-for="(gi, index) in gridItems" :key="index">
+        <v-flex v-for="(gi, index) in gridItems" :key="index">
           <!-- Card -->
           <v-card v-bind:class="flat" class="mx-3 my-2" :height="height">
             <!-- title -->
@@ -32,11 +32,6 @@ export default {
     }
   },
   props: {
-    gridSystem: {
-      type: String,
-      default: '',
-      required: false
-    },
     gridItems: {
       type: Array,
       default: null,
