@@ -162,6 +162,8 @@ export default {
     cardProfile () { return this.$store.getters['profile/cardProfile'] },
     // Chip Used Program List
     usedProgramList () { return this.$store.getters['profile/usedProgramList'] },
+    // Framework List
+    usedFrameworkList () { return this.$store.getters['profile/usedFrameworkList'] },
     // Grid Items
     worksGitHubItems () { return this.$store.getters['profile/worksGitHubItems'] }
   }
