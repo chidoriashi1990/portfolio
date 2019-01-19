@@ -1,5 +1,5 @@
 <template>
-  <v-content>
+  <v-app>
 
     <my-toolbar :linkItems="linkItems" :scrollOption="option"/>
 
@@ -21,7 +21,7 @@
       <section>
         <v-container fluid>
           <v-layout wrap row>
-            <v-flex xs12 offset-xs0 md8 offset-md2 lg8 offset-lg2>
+            <v-flex xs12 offset-xs0 md8 offset-md2>
               <!-- card: profile -->
               <card-profile :avatarSrc="'https://avatars3.githubusercontent.com/u/3616178?s=400&u=31c2ba033be86ce669e96456bca7cecd1e1f769b&v=4'" :cardItem="cardProfile" class="mb-4">
                 <!-- grid icon -->
@@ -121,7 +121,7 @@
 
     <my-footer/>
 
-  </v-content>
+  </v-app>
 </template>
 
 <script>
