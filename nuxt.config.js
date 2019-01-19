@@ -31,7 +31,6 @@ module.exports = {
     generate: {
       dir: 'dist/app'
     },
-    mode: 'spa',
     /*
     ** Run ESLint on save
     */
