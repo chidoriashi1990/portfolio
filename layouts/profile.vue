@@ -135,7 +135,6 @@ import GridItem from './../components/molecules/GridItem'
 import ChipItems from './../components/molecules/ChipItems'
 
 export default {
-  
   components: {
     MyToolbar,
     MyFooter,
