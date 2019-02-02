@@ -1,8 +1,8 @@
 <template>
   <!-- ツールバー -->
   <v-toolbar app dark dense height="60">
-    <v-toolbar-title class="white--text mr-5">
-      github.io
+    <v-toolbar-title class="white--text mr-5 font-weight-black font-italic">
+      yusuke's portfolio
     </v-toolbar-title>
     <!-- リンクボタン -->
     <v-toolbar-items v-for="item in linkItems" v-bind:key="item.label" class="hidden-sm-and-down">
