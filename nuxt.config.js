@@ -1,6 +1,16 @@
 import colors from 'vuetify/es5/util/colors'
 
+const routerBase =
+  process.env.DEPLOY_ENV === 'GH_PAGES'
+    ? {
+        router: {
+          base: '/chidoriashi1990.github.io/',
+        },
+      }
+    : {}
+
 export default {
+  ...routerBase,
   /*
    ** Nuxt rendering mode
    ** See https://nuxtjs.org/api/configuration-mode
@@ -70,6 +80,7 @@ export default {
    ** https://github.com/nuxt-community/vuetify-module
    */
   vuetify: {
+    optionsPath: './vuetify.options.js',
     customVariables: ['~/assets/variables.scss'],
     theme: {
       dark: true,
