@@ -4,7 +4,7 @@ const routerBase =
   process.env.DEPLOY_ENV === 'GH_PAGES'
     ? {
         router: {
-          base: '/chidoriashi1990.github.io/',
+          base: '/',
         },
       }
     : {}
