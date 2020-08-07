@@ -6,9 +6,9 @@
         <vuetify-logo />
       </div>
       <v-card>
-        <v-card-title class="headline">
-          Welcome to the Vuetify + Nuxt.js template
-        </v-card-title>
+        <v-card-title class="headline"
+          >Welcome to the Vuetify + Nuxt.js template</v-card-title
+        >
         <v-card-text>
           <p>
             Vuetify is a progressive Material Design component framework for
@@ -21,8 +21,7 @@
               href="https://vuetifyjs.com"
               target="_blank"
               rel="noopener noreferrer"
-            >
-              documentation </a
+              >documentation</a
             >.
           </p>
           <p>
@@ -32,8 +31,7 @@
               target="_blank"
               rel="noopener noreferrer"
               title="chat"
-            >
-              discord </a
+              >discord</a
             >.
           </p>
           <p>
@@ -43,8 +41,7 @@
               target="_blank"
               rel="noopener noreferrer"
               title="contribute"
-            >
-              issue board </a
+              >issue board</a
             >.
           </p>
           <p>
@@ -52,30 +49,28 @@
             more exciting features in the future.
           </p>
           <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
+            <em>
+              <small>&mdash; John Leider</small>
+            </em>
           </div>
           <hr class="my-3" />
           <a
             href="https://nuxtjs.org/"
             target="_blank"
             rel="noopener noreferrer"
+            >Nuxt Documentation</a
           >
-            Nuxt Documentation
-          </a>
           <br />
           <a
             href="https://github.com/nuxt/nuxt.js"
             target="_blank"
             rel="noopener noreferrer"
+            >Nuxt GitHub</a
           >
-            Nuxt GitHub
-          </a>
         </v-card-text>
         <v-card-actions>
           <v-spacer />
-          <v-btn color="primary" nuxt to="/inspire">
-            Continue
-          </v-btn>
+          <v-btn color="primary" nuxt to="/inspire">Continue</v-btn>
         </v-card-actions>
       </v-card>
     </v-flex>
@@ -83,13 +78,13 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-import VuetifyLogo from '~/components/VuetifyLogo.vue'
+import Logo from '~/components/Logo.vue';
+import VuetifyLogo from '~/components/VuetifyLogo.vue';
 
 export default {
   components: {
     Logo,
     VuetifyLogo,
   },
-}
+};
 </script>
