@@ -37,6 +37,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
-          external_repository: chidoriashi1990/chidoriashi1990.github.io
+          external_repository: ${{ secrets.EXTERNAL_REPOSITORY }}
           publish_branch: master
           publish_dir: ./dist
