@@ -1,5 +1,5 @@
 {
-  "name": "app",
+  "name": "portfoliem",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -12,6 +12,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@nuxtjs/pwa": "^3.3.5",
     "core-js": "^3.9.1",
     "nuxt": "^2.15.3"
   },
