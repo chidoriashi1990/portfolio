@@ -9,8 +9,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - frontend',
-    title: 'frontend',
+    titleTemplate: '%s - portfoliem',
+    title: 'portfoliem',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -42,7 +42,23 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    // https://i18n.nuxtjs.org/
+    'nuxt-i18n',
   ],
+
+  // i18n module configuration
+  i18n: {
+    locales: [
+      { code: 'en', iso: 'en-US', file: 'en.json' },
+      { code: 'ja', iso: 'ja', file: 'ja.json' },
+    ],
+    defaultLocale: 'en',
+    lazy: true,
+    langDir: 'lang/',
+    vueI18n: {
+      fallbackLocale: 'en',
+    },
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
