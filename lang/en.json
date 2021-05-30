@@ -1,3 +1,6 @@
 {
-    "welcome": "welcome"
+    "welcome": "welcome",
+    "about-sub-title": "I am a software engineer working in Tokyo.",
+    "about": "I enjoy turning complex problems into simple and beautiful designs.Therefore, I'm studying and coding so that I can design products with great UI/UX.When I'm not tweet or pushing to GitHub, I'm running or reading.",
+    "work": "work"
 }
