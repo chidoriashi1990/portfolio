@@ -1,98 +1,69 @@
 <template>
-  <v-row justify="center" align="center">
-    <v-col cols="12" sm="8" md="6">
-      <v-card>
-        <v-card-title>
-          {{ $t('welcome') }}
-        </v-card-title>
-      </v-card>
-      <div class="text-center">
-        <logo />
-        <vuetify-logo />
-      </div>
-      <v-card>
-        <v-card-title class="headline">
-          Welcome to the Vuetify + Nuxt.js template
-        </v-card-title>
-        <v-card-text>
-          <p>
-            Vuetify is a progressive Material Design component framework for
-            Vue.js. It was designed to empower developers to create amazing
-            applications.
-          </p>
-          <p>
-            For more information on Vuetify, check out the
-            <a
-              href="https://vuetifyjs.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              documentation </a
-            >.
-          </p>
-          <p>
-            If you have questions, please join the official
-            <a
-              href="https://chat.vuetifyjs.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="chat"
-            >
-              discord </a
-            >.
-          </p>
-          <p>
-            Find a bug? Report it on the github
-            <a
-              href="https://github.com/vuetifyjs/vuetify/issues"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="contribute"
-            >
-              issue board </a
-            >.
-          </p>
-          <p>
-            Thank you for developing with Vuetify and I look forward to bringing
-            more exciting features in the future.
-          </p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
-          </div>
-          <hr class="my-3" />
-          <a
-            href="https://nuxtjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt Documentation
-          </a>
-          <br />
-          <a
-            href="https://github.com/nuxt/nuxt.js"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt GitHub
-          </a>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn color="primary" nuxt to="/inspire"> Continue </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-col>
-  </v-row>
+  <profile-desktop>
+    <!-- Main Component -->
+    <template #main>
+      <profile-card
+        :profile-image="profileImage"
+        :action-buttons="socialData"
+        class="mb-12"
+      />
+
+      <section-card title="about" class="mb-12">
+        <template #text>
+          {{ $t('about-sub-title') }}<br />
+          {{ $t('about') }}
+        </template>
+      </section-card>
+
+      <section-card title="work" class="mb-12">
+        <template #text>
+          {{ $t('work') }}
+        </template>
+      </section-card>
+    </template>
+
+    <!-- Dark Mode Switch -->
+    <template #right-side>
+      <dark-mode-switch />
+    </template>
+  </profile-desktop>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-import VuetifyLogo from '~/components/VuetifyLogo.vue'
+import ProfileDesktop from '@/layouts/ProfileDesktop'
+
+import ProfileCard from '@/components/Card/ProfileCard'
+import SectionCard from '@/components/Card/SectionCard'
+import DarkModeSwitch from '@/components/Switch/DarkModeSwitch'
 
 export default {
-  components: {
-    Logo,
-    VuetifyLogo,
+  components: { ProfileDesktop, ProfileCard, SectionCard, DarkModeSwitch },
+  data: () => {
+    return {
+      profileImage: 'https://avatars.githubusercontent.com/u/3616178?v=4',
+      socialData: [
+        {
+          icon: 'mdi-email',
+          href: 'mailto:chidoriashi00918@gmail.com',
+        },
+        {
+          icon: 'mdi-linkedin',
+          href: 'https://www.linkedin.com/in/yusuke-miyakawa-a0a219191/',
+        },
+        {
+          icon: 'mdi-facebook',
+          href: 'https://www.facebook.com/YuM1909',
+        },
+        {
+          icon: 'mdi-twitter',
+          href: 'https://twitter.com/MiyakawaYusuke',
+        },
+        {
+          icon: 'mdi-github',
+          href: 'https://github.com/chidoriashi1990',
+        },
+      ],
+    }
   },
 }
 </script>
