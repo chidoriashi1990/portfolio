@@ -1,5 +1,5 @@
 <template>
-  <v-footer class="d-flex flex-column">
+  <v-footer class="d-flex flex-column" absolute>
     <v-card tile flat class="transparent">
       <v-card tile flat class="d-flex justify-center transparent">
         <!-- title -->
