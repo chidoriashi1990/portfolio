@@ -24,7 +24,7 @@
 
     <!-- Dark Mode Switch -->
     <template #right-side>
-      <dark-mode-switch />
+      <dark-mode-switch @darkMode="darkModeSwitch" />
     </template>
   </profile-desktop>
 </template>
@@ -64,6 +64,11 @@ export default {
         },
       ],
     }
+  },
+  methods: {
+    darkModeSwitch(darkModeVal) {
+      this.$vuetify.theme.dark = darkModeVal
+    },
   },
 }
 </script>
