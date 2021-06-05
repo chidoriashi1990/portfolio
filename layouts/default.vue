@@ -1,7 +1,11 @@
 <template>
   <v-app>
     <v-main>
-      <portfoliem-header @menu="scrollTo" @transMode="cangeTransMode" />
+      <portfoliem-header
+        :initial-trans-mode="transMode"
+        @menu="scrollTo"
+        @transMode="cangeTransMode"
+      />
       <v-container>
         <nuxt class="wrapper" />
       </v-container>
@@ -24,6 +28,7 @@ export default {
     ContactFooter,
   },
   data: () => ({
+    transMode: 'en',
     socialData: [
       {
         icon: 'mdi-email',
@@ -47,6 +52,9 @@ export default {
       },
     ],
   }),
+  created() {
+    this.initialTransMode()
+  },
   methods: {
     /**
      * @module scrollTo
@@ -54,6 +62,13 @@ export default {
      */
     scrollTo(menu) {
       this.$vuetify.goTo('#' + menu)
+    },
+    /**
+     * Initialization process for translation function
+     * @module initialTransMode
+     */
+    initialTransMode() {
+      this.transMode = this.$i18n.locale
     },
     /**
      * @module cangeTransMode
