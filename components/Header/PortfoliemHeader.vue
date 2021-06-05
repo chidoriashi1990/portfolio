@@ -59,7 +59,7 @@ export default {
     transModel: 'en',
     transItems: [
       { label: 'English', val: 'en' },
-      { label: '日本語', val: 'jp' },
+      { label: '日本語', val: 'ja' },
     ],
   }),
   methods: {

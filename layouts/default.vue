@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-main>
-      <portfoliem-header />
+      <portfoliem-header @transMode="cangeTransMode" />
       <v-container>
         <nuxt />
       </v-container>
@@ -43,5 +43,16 @@ export default {
       },
     ],
   }),
+  methods: {
+    cangeTransMode(transMode) {
+      switch (transMode) {
+        case 'en':
+          this.$router.push('/')
+          break
+        default:
+          this.$router.push('/' + transMode)
+      }
+    },
+  },
 }
 </script>
