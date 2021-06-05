@@ -3,7 +3,7 @@
     <v-main>
       <portfoliem-header @transMode="cangeTransMode" />
       <v-container>
-        <nuxt />
+        <nuxt class="wrapper" />
       </v-container>
       <contact-footer title="contact" :action-buttons="socialData" />
     </v-main>
@@ -56,3 +56,9 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.wrapper {
+  padding-bottom: 260px;
+}
+</style>
