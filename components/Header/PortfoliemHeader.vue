@@ -62,7 +62,15 @@ export default {
       { label: '日本語', val: 'ja' },
     ],
   }),
+  created() {
+    this.transModeName(this.$i18n.locale)
+  },
   methods: {
+    /**
+     * Initialize translation settings
+     * @module transModeName
+     * @param {string} transModel - Ex. en, ja
+     */
     transModeName(transModel) {
       for (let i = 0; i < this.transItems.length; i++) {
         if (this.transItems[i].val === transModel) {
