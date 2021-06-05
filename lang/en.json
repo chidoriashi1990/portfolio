@@ -1,28 +1,29 @@
 {
-    "welcome": "welcome",
-    "about-sub-title": "I am a software engineer working in Tokyo.",
-    "about": "I enjoy turning complex problems into simple and beautiful designs.Therefore, I'm studying and coding so that I can design products with great UI/UX.When I'm not tweet or pushing to GitHub, I'm running or reading.",
-    "work":{
-        "sub-titile-1": "Work history",
-        "history": {
-            "domain01": {
-                "title": "TOPPAN PRINTING CO., LTD.",
-                "contents": {
-                    "content01": {
-                        "sub-title": "",
-                        "text": "incumbent"
-                    }
-                }
-            },
-            "university": {
-                "title": "Graduate School of Science and Technology, Nihon University",
-                "contents": {
-                    "content01": {
-                        "sub-title": "",
-                        "text": "Completed Master's program in Information Science"
-                    }
-                }
-            }
+  "name": "Yusuke Miyakawa",
+  "profession": "Software Engineer & Web Development.",
+  "about-sub-title": "I am a software engineer working in Tokyo.",
+  "about": "I enjoy turning complex problems into simple and beautiful designs.Therefore, I'm studying and coding so that I can design products with great UI/UX.When I'm not tweet or pushing to GitHub, I'm running or reading.",
+  "work": {
+    "sub-titile-1": "Work history",
+    "history": {
+      "domain01": {
+        "title": "TOPPAN PRINTING CO., LTD.",
+        "contents": {
+          "content01": {
+            "sub-title": "",
+            "text": "incumbent"
+          }
         }
+      },
+      "university": {
+        "title": "Graduate School of Science and Technology, Nihon University",
+        "contents": {
+          "content01": {
+            "sub-title": "",
+            "text": "Completed Master's program in Information Science"
+          }
+        }
+      }
     }
+  }
 }
