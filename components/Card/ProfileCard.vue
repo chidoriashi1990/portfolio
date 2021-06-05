@@ -15,9 +15,9 @@
           </v-col>
           <v-col cols="8">
             <v-card-title class="headline font-weight-bold">
-              Yusuke Miyakawa
+              {{ $t('name') }}
             </v-card-title>
-            <v-card-text> Software Engineer & Web Development. </v-card-text>
+            <v-card-text> {{ $t('profession') }} </v-card-text>
             <v-card-actions>
               <div v-for="button in actionButtons" :key="button.icon">
                 <v-btn

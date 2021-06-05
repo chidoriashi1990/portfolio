@@ -1,28 +1,29 @@
 {
-    "welcome": "ようこそ",
-    "about-sub-title": "私は東京で働くソフトウェアエンジニアです。",
-    "about": "複雑な問題をシンプルで美しいデザインに変えるのが好きです。そのため、優れたUI/UXのプロダクトをデザインできるように勉強したり、コーディングしています。ツイートやGitHubにプッシュしていないときは、ランニングや読書をしています。",
-    "work":{
-        "sub-titile-1": "職歴",
-        "history": {
-            "domain01": {
-                "title": "凸版印刷株式会社",
-                "contents": {
-                    "content01": {
-                        "sub-title": "",
-                        "text": "現職"
-                    }
-                }
-            },
-            "university": {
-                "title": "日本大学大学院 理工学研究科",
-                "contents": {
-                    "content01": {
-                        "sub-title": "",
-                        "text": "情報科学専攻 修了(修士)"
-                    }
-                }
-            }
+  "name": "宮川　裕介",
+  "profession": "ソフトウェアエンジニア & Webデベロッパー",
+  "about-sub-title": "私は東京で働くソフトウェアエンジニアです。",
+  "about": "複雑な問題をシンプルで美しいデザインに変えるのが好きです。そのため、優れたUI/UXのプロダクトをデザインできるように勉強したり、コーディングしています。ツイートやGitHubにプッシュしていないときは、ランニングや読書をしています。",
+  "work": {
+    "sub-titile-1": "職歴",
+    "history": {
+      "domain01": {
+        "title": "凸版印刷株式会社",
+        "contents": {
+          "content01": {
+            "sub-title": "",
+            "text": "現職"
+          }
         }
+      },
+      "university": {
+        "title": "日本大学大学院 理工学研究科",
+        "contents": {
+          "content01": {
+            "sub-title": "",
+            "text": "情報科学専攻 修了(修士)"
+          }
+        }
+      }
     }
+  }
 }
