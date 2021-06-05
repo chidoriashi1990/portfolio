@@ -48,6 +48,13 @@
 <script>
 export default {
   name: 'PortfoliemHeader',
+  props: {
+    initialTransMode: {
+      type: String,
+      require: false,
+      default: 'en',
+    },
+  },
   data: () => ({
     navButtons: [
       { label: 'about', href: '' },
@@ -63,7 +70,7 @@ export default {
     ],
   }),
   created() {
-    this.transModeName(this.$i18n.locale)
+    this.transModeName(this.initialTransMode)
   },
   methods: {
     /**
