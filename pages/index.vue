@@ -8,6 +8,7 @@
         class="mb-12"
       />
 
+      <!-- About -->
       <section-card id="about" title="about" class="mb-12">
         <template #text>
           <v-card flat>
@@ -17,10 +18,10 @@
           </v-card>
 
           <div class="mx-8">
-            <p class="font-weight-bold text-subtitle-1">
+            <p class="font-weight-bold text-subtitle-1 text--primary">
               {{ $t('about-sub-title') }}
             </p>
-            <p class="body-2">
+            <p class="body-2 text--primary">
               {{ $t('about') }}
             </p>
           </div>
@@ -34,9 +35,43 @@
         </template>
       </section-card>
 
+      <!-- Works -->
       <section-card id="works" title="works" class="mb-12">
         <template #text>
-          {{ $t('work') }}
+          <!-- Sub title -->
+          <p class="text-h6">
+            {{ $t('work.sub-titile-1') }}
+          </p>
+          <v-divider />
+
+          <!-- Timeline -->
+          <v-timeline dense>
+            <v-timeline-item
+              v-for="(item, i) in timeline"
+              :key="i"
+              color="transparent"
+              large
+            >
+              <template #icon>
+                <v-icon large>{{ item.icon }}</v-icon>
+              </template>
+              <v-card>
+                <v-card-text>
+                  <div>{{ item.yyyymm }}</div>
+                  <div class="text-subtitle-1 text--primary">
+                    {{ $t(item.title) }}
+                  </div>
+                  <div
+                    v-for="(content, j) in item.contents"
+                    :key="j"
+                    class="text--primary"
+                  >
+                    {{ $t(content + '.text') }}
+                  </div>
+                </v-card-text>
+              </v-card>
+            </v-timeline-item>
+          </v-timeline>
         </template>
       </section-card>
     </template>
@@ -80,6 +115,20 @@ export default {
         {
           icon: 'mdi-github',
           href: 'https://github.com/chidoriashi1990',
+        },
+      ],
+      timeline: [
+        {
+          yyyymm: '2014-04',
+          icon: 'mdi-domain',
+          title: 'work.history.domain01.title',
+          contents: ['work.history.domain01.contents.content01'],
+        },
+        {
+          yyyymm: '2013-03',
+          icon: 'mdi-school',
+          title: 'work.history.university.title',
+          contents: ['work.history.university.contents.content01'],
         },
       ],
     }
