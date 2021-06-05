@@ -10,8 +10,27 @@
 
       <section-card id="about" title="about" class="mb-12">
         <template #text>
-          {{ $t('about-sub-title') }}<br />
-          {{ $t('about') }}
+          <v-card flat>
+            <v-card-actions>
+              <v-icon x-large>mdi-format-quote-open</v-icon>
+            </v-card-actions>
+          </v-card>
+
+          <div class="mx-8">
+            <p class="font-weight-bold text-subtitle-1">
+              {{ $t('about-sub-title') }}
+            </p>
+            <p class="body-2">
+              {{ $t('about') }}
+            </p>
+          </div>
+
+          <v-card flat>
+            <v-card-actions>
+              <v-spacer></v-spacer>
+              <v-icon x-large>mdi-format-quote-close</v-icon>
+            </v-card-actions>
+          </v-card>
         </template>
       </section-card>
 
