@@ -8,14 +8,14 @@
         class="mb-12"
       />
 
-      <section-card title="about" class="mb-12">
+      <section-card id="about" title="about" class="mb-12">
         <template #text>
           {{ $t('about-sub-title') }}<br />
           {{ $t('about') }}
         </template>
       </section-card>
 
-      <section-card title="work" class="mb-12">
+      <section-card id="works" title="works" class="mb-12">
         <template #text>
           {{ $t('work') }}
         </template>

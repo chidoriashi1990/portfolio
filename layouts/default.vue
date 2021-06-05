@@ -1,11 +1,15 @@
 <template>
   <v-app>
     <v-main>
-      <portfoliem-header @transMode="cangeTransMode" />
+      <portfoliem-header @menu="scrollTo" @transMode="cangeTransMode" />
       <v-container>
         <nuxt class="wrapper" />
       </v-container>
-      <contact-footer title="contact" :action-buttons="socialData" />
+      <contact-footer
+        id="contact"
+        title="contact"
+        :action-buttons="socialData"
+      />
     </v-main>
   </v-app>
 </template>
@@ -44,6 +48,17 @@ export default {
     ],
   }),
   methods: {
+    /**
+     * @module scrollTo
+     * @param {string} menu
+     */
+    scrollTo(menu) {
+      this.$vuetify.goTo('#' + menu)
+    },
+    /**
+     * @module cangeTransMode
+     * @param {string} transMode
+     */
     cangeTransMode(transMode) {
       switch (transMode) {
         case 'en':
