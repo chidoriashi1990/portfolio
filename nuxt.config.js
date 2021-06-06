@@ -1,4 +1,6 @@
 import colors from 'vuetify/es5/util/colors'
+const environment = process.env.NODE_ENV || 'local'
+const env = require(`./env/${environment}.js`)
 
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
@@ -6,6 +8,10 @@ export default {
 
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
+
+  router: {
+    base: env.BASE_URL,
+  },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -16,7 +22,9 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: `${env.BASE_URL}favicon.ico` },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
