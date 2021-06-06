@@ -13,7 +13,7 @@
         v-model="switchValue"
         inset
         color="purple"
-        @click="$emit('darkMode', switchValue)"
+        @click="clickSwitch"
       />
       <v-btn fab x-large elevation="0" :ripple="false" class="ml-8">
         <v-icon fab color="yellow darken-1"> mdi-weather-night </v-icon>
@@ -28,5 +28,28 @@ export default {
   data: () => ({
     switchValue: false,
   }),
+  created() {
+    const darkmode = localStorage.getItem('darkmode')
+    if (darkmode === null) {
+      this.checkDarkMode()
+    } else {
+      this.switchValue = JSON.parse(darkmode.toLowerCase())
+    }
+    this.clickSwitch()
+  },
+  methods: {
+    clickSwitch() {
+      localStorage.setItem('darkmode', this.switchValue)
+      this.$emit('darkMode', this.switchValue)
+    },
+    checkDarkMode() {
+      // eslint-disable-next-line nuxt/no-globals-in-created
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches === true) {
+        this.switchValue = true
+      } else {
+        this.switchValue = false
+      }
+    },
+  },
 }
 </script>
