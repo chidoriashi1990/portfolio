@@ -78,7 +78,9 @@
 
     <!-- Dark Mode Switch -->
     <template #right-side>
-      <dark-mode-switch @darkMode="darkModeSwitch" />
+      <div class="d-none d-sm-flex">
+        <dark-mode-switch @darkMode="darkModeSwitch" />
+      </div>
     </template>
   </profile-desktop>
 </template>

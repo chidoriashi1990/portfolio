@@ -1,11 +1,18 @@
 <template>
   <v-app>
     <v-main>
-      <portfoliem-header
-        :initial-trans-mode="transMode"
-        @menu="scrollTo"
-        @transMode="cangeTransMode"
-      />
+      <!-- Hidden only on xs -->
+      <div class="d-none d-sm-flex">
+        <portfoliem-header
+          :initial-trans-mode="transMode"
+          @menu="scrollTo"
+          @transMode="cangeTransMode"
+        />
+      </div>
+      <!-- Visible only on xs -->
+      <div class=".d-flex .d-sm-none">
+        <portfoliem-mobile-header> </portfoliem-mobile-header>
+      </div>
       <v-container>
         <nuxt class="wrapper" />
       </v-container>
@@ -20,11 +27,13 @@
 
 <script>
 import PortfoliemHeader from '@/components/Header/PortfoliemHeader'
+import PortfoliemMobileHeader from '@/components/Header/PortfoliemMobileHeader.vue'
 import ContactFooter from '@/components/Footer/ContactFooter'
 
 export default {
   components: {
     PortfoliemHeader,
+    PortfoliemMobileHeader,
     ContactFooter,
   },
   data: () => ({
