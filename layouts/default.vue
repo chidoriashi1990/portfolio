@@ -10,7 +10,7 @@
         />
       </div>
       <!-- Visible only on xs -->
-      <div class=".d-flex .d-sm-none">
+      <div class="d-flex d-sm-none">
         <portfoliem-mobile-header> </portfoliem-mobile-header>
       </div>
       <v-container>
